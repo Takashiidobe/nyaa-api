@@ -1,5 +1,6 @@
 const { si } = require('nyaapi');
 const express = require('express');
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -15,4 +16,4 @@ app.get('/', async (req, res) => {
   res.json(ans);
 });
 
-app.listen(process.env.PORT || 3000, console.log("running on port 3000"));
+app.listen(port, console.log(`running on port ${port}`));
